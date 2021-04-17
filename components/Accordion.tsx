@@ -5,6 +5,7 @@ import { transformData } from "../services/AccordionService";
 import Cart from "./Cart";
 import ToggleStatus from "./ToggleStatus";
 import { AccordianProps, TransformData } from "../types";
+import { updateCart } from "../services/api";
 
 export interface ItemStatus {
   [key: string]: string;
@@ -27,6 +28,12 @@ const Accordion = ({ carts, users, products, currentView }: AccordianProps) => {
     setActiveIndex([0]);
     setSelected([]);
   }, [currentView]);
+
+  useEffect(() => {
+    // Pseudo function for updating cart, we do not have an api to support this yet,
+    // but this is where I will update
+    updateCart(itemStatus);
+  }, [itemStatus]);
 
   const toggleSelected = (selectedId) => {
     let newSelected;

@@ -63,7 +63,7 @@ export type AccordianProps = {
   carts: Cart[];
   products: Product[];
   users: User[];
-  currentView: CurrentView
+  currentView: string
 };
 
 type Label {
