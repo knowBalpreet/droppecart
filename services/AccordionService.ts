@@ -1,4 +1,5 @@
-import { AccordianProps } from "../types";
+import { AccordianProps, User } from "../types";
+import _ from "lodash";
 
 const calculateCartCost = (cartProducts, products) => {
   let cost = 0;
@@ -22,7 +23,7 @@ const calculateProductCost = (productId, carts, products) => {
 
 const getProductUsers = (users, carts, products, product) => {
   let productUsers = [];
-  Object.values(users).forEach((user) => {
+  Object.values(users).forEach((user: User) => {
     // users that have the current product in their cart
     let cart = _.find(carts, { userId: user.id });
     if (cart) {

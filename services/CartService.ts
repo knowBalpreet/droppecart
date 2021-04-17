@@ -1,3 +1,5 @@
+import _ from "lodash";
+
 const modes = ["selected", "approved", "disapproved"],
   footerButtons = {
     selected: ["approve", "disapprove", "clear"],

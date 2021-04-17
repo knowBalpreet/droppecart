@@ -57,32 +57,31 @@ export type RootState = {
 
 export type CurrentView = {
   currentView: "users" | "products";
-}
+};
 
 export type AccordianProps = {
   carts: Cart[];
   products: Product[];
   users: User[];
-  currentView: string
+  currentView: string;
 };
 
-type Label {
+type Label = {
   img: any;
   title: string;
   cost: number;
-}
+};
 
-type Children {
+type Children = {
   img: string;
   title: string;
   quantity: number;
   price: number;
   total: number;
   id: string;
-}
+};
 
-export type TransformData {
+export type TransformData = {
   label: Label;
   children: Children[];
-}
-
+};
